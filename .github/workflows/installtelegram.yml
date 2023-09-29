@@ -12,10 +12,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
     
-      - name: setup-jmeter
+      - name: setup-telegram
         run: |
           sudo apt-get update
+          echo "Install Curl"
           sudo apt install curl -y
+          echo "Install JDK"
           sudo apt install -y default-jdk
+          echo "Install Telegram"
           sudo apt install telegram-desktop
-          y
+          
