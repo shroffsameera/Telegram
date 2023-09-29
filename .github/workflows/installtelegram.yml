@@ -1,0 +1,21 @@
+name: Install Telegram
+
+on:
+  push:
+    branches: [ "main" ]
+
+  workflow_dispatch: 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+    
+      - name: setup-jmeter
+        run: |
+          sudo apt-get update
+          sudo apt install curl -y
+          sudo apt install -y default-jdk
+          sudo apt install telegram-desktop
+          y
